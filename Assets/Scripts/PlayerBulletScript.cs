@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class PlayerBulletScript : MonoBehaviour
 {
     public float AutoDestroyTime = 1f;
 
@@ -18,6 +18,11 @@ public class BulletScript : MonoBehaviour
         }
     }
 
+    public void DamagePlayer(GameObject col)
+    {
+
+        Explode();
+    }
     public void DamageEnemy(GameObject col)
     {
 

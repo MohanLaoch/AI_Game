@@ -605,9 +605,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5817071582918065131, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_Speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5817071582918065133, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
       propertyPath: m_Name
       value: Basic Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817071583309444598, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: BulletForce
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
