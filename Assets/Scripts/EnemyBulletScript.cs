@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBulletScript : MonoBehaviour
+public class EnemyBulletScript : MonoBehaviour
 {
     public float AutoDestroyTime = 1f;
 
@@ -12,22 +12,13 @@ public class PlayerBulletScript : MonoBehaviour
         {
             DamagePlayer(col.gameObject);
         }
-        else if(col.gameObject.CompareTag("Enemy") == true)
-        {
-            DamageEnemy(col.gameObject);
-        }
-        else if(col.gameObject.CompareTag("Wall"))
+        else if (col.gameObject.CompareTag("Wall"))
         {
             Explode();
         }
     }
 
     public void DamagePlayer(GameObject col)
-    {
-
-        Explode();
-    }
-    public void DamageEnemy(GameObject col)
     {
 
         Explode();

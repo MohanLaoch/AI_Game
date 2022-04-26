@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBulletScript : MonoBehaviour
+public class BulletScript : MonoBehaviour
 {
     public float AutoDestroyTime = 1f;
 
     public void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Player") == true)
-        {
-            DamagePlayer(col.gameObject);
-        }
-        else if(col.gameObject.CompareTag("Enemy") == true)
+        if(col.gameObject.CompareTag("Enemy") == true)
         {
             DamageEnemy(col.gameObject);
         }
@@ -22,11 +18,6 @@ public class PlayerBulletScript : MonoBehaviour
         }
     }
 
-    public void DamagePlayer(GameObject col)
-    {
-
-        Explode();
-    }
     public void DamageEnemy(GameObject col)
     {
 
