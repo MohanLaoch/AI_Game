@@ -253,8 +253,8 @@ MonoBehaviour:
   controller: {fileID: 565670746}
   speed: 6
   BulletCooldown: 60
-  BulletPrefab: {fileID: 3613332477553616372, guid: 1b751ccdc9f7cbd4581918aac2fb6c5f, type: 3}
-  BulletForce: 20
+  BulletPrefab: {fileID: 2067165495427296161, guid: 1b751ccdc9f7cbd4581918aac2fb6c5f, type: 3}
+  BulletForce: 30
   firePoint: {fileID: 313155737}
 --- !u!143 &565670746
 CharacterController:
