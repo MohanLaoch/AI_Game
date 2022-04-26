@@ -17,11 +17,13 @@ public class CoverState : State
 
     public float AttackRange = 10f;
 
+    private bool HasMoved;
+
     public override State RunCurrentState()
     {
         RunState();
 
-        if(agent.remainingDistance <= agent.stoppingDistance && walkCurrentCooldown <= walkCooldown)
+        if (agent.remainingDistance <= agent.stoppingDistance && walkCurrentCooldown <= walkCooldown && HasMoved == true)
         {
             RaycastHit hit;
 
@@ -30,11 +32,13 @@ public class CoverState : State
                 if (hit.transform.tag == "Player")
                 {
                     walkCurrentCooldown = walkCooldown;
+                    HasMoved = false;
                     return attackState;
                 }
                 else
                 {
                     walkCurrentCooldown = walkCooldown;
+                    HasMoved = false;
                     return chaseState;
                 }
             }
@@ -65,6 +69,12 @@ public class CoverState : State
 
     public void RunState()
     {
+        if(HasMoved == false)
+        {
+            HasMoved = true;
+            agent.SetDestination(RandomNavMeshLocation());
+        }
+
         if(walkCurrentCooldown <= walkCooldown)
         {
             walkCurrentCooldown--;

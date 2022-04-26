@@ -31,7 +31,7 @@ public class IdleState : State
     public void RunState()
     {
         Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.red, DetectionRange);
-        if (Vector3.Distance(transform.position, Player.transform.position) >= DetectionRange)
+        if (Vector3.Distance(transform.position, Player.transform.position) <= DetectionRange)
         {
             RaycastHit hit;
 
