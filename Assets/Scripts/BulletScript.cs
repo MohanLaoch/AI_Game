@@ -25,10 +25,12 @@ public class BulletScript : MonoBehaviour
     public void DamagePlayer(GameObject col)
     {
 
+        Explode();
     }
     public void DamageEnemy(GameObject col)
     {
 
+        Explode();
     }
 
     public void Explode()
