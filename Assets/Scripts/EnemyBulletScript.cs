@@ -20,7 +20,7 @@ public class EnemyBulletScript : MonoBehaviour
 
     public void DamagePlayer(GameObject col)
     {
-
+        Destroy(col.gameObject);
         Explode();
     }
 

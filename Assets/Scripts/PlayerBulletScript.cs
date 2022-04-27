@@ -18,14 +18,9 @@ public class PlayerBulletScript : MonoBehaviour
         }
     }
 
-    public void DamagePlayer(GameObject col)
-    {
-
-        Explode();
-    }
     public void DamageEnemy(GameObject col)
     {
-
+        Destroy(col.gameObject);
         Explode();
     }
 
