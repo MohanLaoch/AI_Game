@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public float BulletForce = 10f;
     public Transform firePoint;
 
+    public float gravity = 5f;
+    private Vector3 velocity = new Vector3(0, 0, 0);
+
     private Vector3 pointToLook;
 
     private void Start()
@@ -47,6 +50,15 @@ public class PlayerController : MonoBehaviour
                 Shoot();
             }
         }
+
+        velocity.y -= gravity * Time.deltaTime;
+
+        if(velocity.y >= 10f)
+        {
+            velocity.y = 10f;
+        }
+
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void CharRotation()
