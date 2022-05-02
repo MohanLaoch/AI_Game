@@ -20,12 +20,13 @@ public class ChaseState : State
     public float AllyDetectionRange = 20f;
     public bool IsAfraid;
     public bool IsAllyCloseEnough;
+    public bool NoAllies;
 
     public override State RunCurrentState()
     {
         RunState();
 
-        if(IsAfraid == true)
+        if(IsAfraid == true && NoAllies == false)
         {
             IsAllyCloseEnough = false;
             IsAfraid = false;

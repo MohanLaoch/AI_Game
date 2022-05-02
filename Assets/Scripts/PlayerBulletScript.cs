@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBulletScript : MonoBehaviour
 {
+    public int damage;
     public float AutoDestroyTime = 1f;
 
     public void OnTriggerEnter(Collider col)
@@ -20,7 +21,7 @@ public class PlayerBulletScript : MonoBehaviour
 
     public void DamageEnemy(GameObject col)
     {
-        Destroy(col.gameObject);
+        col.GetComponent<EnemyStats>().TakeDamage(damage);
         Explode();
     }
 

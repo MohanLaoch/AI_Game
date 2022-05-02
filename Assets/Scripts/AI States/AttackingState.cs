@@ -8,6 +8,8 @@ public class AttackingState : State
     public CoverState coverState;
     public FearState fearState;
 
+    public EnemyStats stats;
+
     [HideInInspector] public int NumShotsRequired;
 
     private GameObject Player;
@@ -26,6 +28,7 @@ public class AttackingState : State
     public float AllyDetectionRange = 20f;
     public bool IsAfraid;
     public bool IsAllyCloseEnough;
+    public bool NoAllies;
 
     public int NumShotsTaken;
     private float BulletCurrentCooldown = 0f;
@@ -34,7 +37,7 @@ public class AttackingState : State
     {
         RunState();
 
-        if (IsAfraid == true)
+        if (IsAfraid == true && NoAllies == false)
         {
             NumShotsTaken = 0;
             BulletCurrentCooldown = 0f;
@@ -100,6 +103,8 @@ public class AttackingState : State
         Rigidbody rb = Bullet.GetComponent<Rigidbody>();
         FireDir.y = transform.position.y;
         rb.AddForce((FireDir - firePoint.position).normalized * BulletForce, ForceMode.Impulse);
+
+        Bullet.GetComponent<EnemyBulletScript>().damage = (int)Random.Range(stats.MinDamage, stats.MaxDamage);
         NumShotsTaken++;
     }
     private void CharRotation()

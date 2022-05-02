@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class FearState : State
 {
     public AttackingState AttackState;
+    public ChaseState chaseState;
 
     public GameObject ParentEnemy;
     public NavMeshAgent agent;
@@ -23,6 +24,8 @@ public class FearState : State
         if(NoAllies)
         {
             AttackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+            AttackState.NoAllies = true;
+            chaseState.NoAllies = true;
             return AttackState;
         }
         else if(AllyCloseEnough)
@@ -38,9 +41,13 @@ public class FearState : State
 
     public void RunState()
     {
-        if(Vector3.Distance(gameObject.transform.position, ClosestAlly.transform.position) <= AllyDetectionRange/2)
+        if(Vector3.Distance(gameObject.transform.position, agent.destination) <= AllyDetectionRange/2)
         {
             AllyCloseEnough = true;
+        }
+        else if(ClosestAlly == null)
+        {
+            NoAllies = true;
         }
     }
 

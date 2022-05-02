@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackState: {fileID: 5817071583309444598}
+  chaseState: {fileID: 5817071583092919200}
   ParentEnemy: {fileID: 5817071582918065133}
   agent: {fileID: 5817071582918065131}
   AllyDetectionRange: 20
@@ -208,6 +209,7 @@ GameObject:
   - component: {fileID: 5817071582918065135}
   - component: {fileID: 5817071582918065131}
   - component: {fileID: 5817071582918065134}
+  - component: {fileID: 2270445479266544085}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Enemy
@@ -329,6 +331,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 5817071583119382365}
+--- !u!114 &2270445479266544085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5817071582918065133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd79c6dd3a9a1042bb844017f7dbd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHP: 10
+  CurrentHP: 0
+  MaxDamage: 4
+  MinDamage: 6
 --- !u!1 &5817071583092919206
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +399,7 @@ MonoBehaviour:
   AllyDetectionRange: 20
   IsAfraid: 0
   IsAllyCloseEnough: 0
+  NoAllies: 0
 --- !u!1 &5817071583119382355
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coverState: {fileID: 5817071583396577044}
   fearState: {fileID: 969452847}
+  stats: {fileID: 2270445479266544085}
   NumShotsRequired: 0
   BulletCooldown: 120
   BulletPrefab: {fileID: 85894696049932481, guid: 7852edb9a3f9390408940162634d38ca, type: 3}
@@ -483,6 +503,7 @@ MonoBehaviour:
   AllyDetectionRange: 20
   IsAfraid: 0
   IsAllyCloseEnough: 0
+  NoAllies: 0
   NumShotsTaken: 0
 --- !u!1 &5817071583396577034
 GameObject:

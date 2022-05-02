@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
+    private PlayerStats stats;
     private Camera cam;
 
     public float speed = 6f;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         cam = Camera.main;
         controller = GetComponent<CharacterController>();
+        stats = GetComponent<PlayerStats>();
     }
 
     void Update()
@@ -85,5 +87,7 @@ public class PlayerController : MonoBehaviour
         Rigidbody rb = Bullet.GetComponent<Rigidbody>();
         FireDir.y = transform.position.y;
         rb.AddForce((FireDir - firePoint.position).normalized * BulletForce, ForceMode.Impulse);
+
+        Bullet.GetComponent<PlayerBulletScript>().damage = (int)Random.Range(stats.MinDamage, stats.MaxDamage);
     }
 }
