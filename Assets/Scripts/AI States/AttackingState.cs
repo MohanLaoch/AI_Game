@@ -6,13 +6,13 @@ using UnityEngine.AI;
 public class AttackingState : State
 {
     public CoverState coverState;
-    public int NumShotsTaken;
+    public FearState fearState;
+
     [HideInInspector] public int NumShotsRequired;
 
     private GameObject Player;
 
     public float BulletCooldown = 60f;
-    private float BulletCurrentCooldown = 0f;
 
     public GameObject BulletPrefab;
     public float BulletForce = 10f;
@@ -21,13 +21,34 @@ public class AttackingState : State
 
     public NavMeshAgent agent;
 
+    //Fear Variables
+    public GameObject ParentEnemy;
+    public float AllyDetectionRange = 20f;
+    public bool IsAfraid;
+    public bool IsAllyCloseEnough;
+
+    public int NumShotsTaken;
+    private float BulletCurrentCooldown = 0f;
+
     public override State RunCurrentState()
     {
         RunState();
 
-        if(NumShotsTaken == NumShotsRequired)
+        if (IsAfraid == true)
         {
             NumShotsTaken = 0;
+            BulletCurrentCooldown = 0f;
+            IsAllyCloseEnough = false;
+            IsAfraid = false;
+            fearState.FindAlly();
+            return fearState;
+        }
+        else if (NumShotsTaken == NumShotsRequired)
+        {
+            NumShotsTaken = 0;
+            BulletCurrentCooldown = 0f;
+            IsAllyCloseEnough = false;
+            IsAfraid = false;
             return coverState;
         }
         else
@@ -35,6 +56,7 @@ public class AttackingState : State
             return this;
         }
     }
+
     public void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -52,6 +74,22 @@ public class AttackingState : State
         else if(BulletCurrentCooldown > 0)
         {
             BulletCurrentCooldown--;
+        }
+
+        GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(var Ally in Allies)
+        {
+            if (Ally != ParentEnemy)
+            {
+                if (Vector3.Distance(gameObject.transform.position, Ally.transform.position) < AllyDetectionRange)
+                {
+                    IsAllyCloseEnough = true;
+                }
+            }
+        }
+        if(IsAllyCloseEnough != true)
+        {
+            IsAfraid = true;
         }
     }
     public void Shoot()

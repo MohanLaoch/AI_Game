@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class ChaseState : State
 {
     public AttackingState attackState;
+    public FearState fearState;
+
     public bool isInAttackRange;
 
     private GameObject Player;
@@ -13,12 +15,28 @@ public class ChaseState : State
     public NavMeshAgent agent;
     public float AttackRange = 10f;
 
+    //Fear Variables
+    public GameObject ParentEnemy;
+    public float AllyDetectionRange = 20f;
+    public bool IsAfraid;
+    public bool IsAllyCloseEnough;
+
     public override State RunCurrentState()
     {
         RunState();
-        if (isInAttackRange)
+
+        if(IsAfraid == true)
+        {
+            IsAllyCloseEnough = false;
+            IsAfraid = false;
+            fearState.FindAlly();
+            return fearState;
+        }
+        else if (isInAttackRange)
         {
             attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+            IsAllyCloseEnough = false;
+            IsAfraid = false;
             return attackState;
         }
         else
@@ -46,6 +64,22 @@ public class ChaseState : State
                     isInAttackRange = true;
                 }
             }
+        }
+
+        GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var Ally in Allies)
+        {
+            if (Ally != ParentEnemy)
+            {
+                if (Vector3.Distance(gameObject.transform.position, Ally.transform.position) < AllyDetectionRange)
+                {
+                    IsAllyCloseEnough = true;
+                }
+            }
+        }
+        if (IsAllyCloseEnough != true)
+        {
+            IsAfraid = true;
         }
     }
 }

@@ -33,16 +33,18 @@ public class CoverState : State
                 {
                     walkCurrentCooldown = walkCooldown;
                     HasMoved = false;
+                    attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
                     return attackState;
                 }
-                else
-                {
-                    walkCurrentCooldown = walkCooldown;
-                    HasMoved = false;
-                    return chaseState;
-                }
             }
-            return this;
+            else
+            {
+                walkCurrentCooldown = walkCooldown;
+                HasMoved = false;
+                return chaseState;
+            }
+
+            return chaseState;
         }
         else
         {

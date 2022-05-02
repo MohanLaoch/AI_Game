@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &969452846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969452848}
+  - component: {fileID: 969452847}
+  m_Layer: 0
+  m_Name: FearState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969452848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969452846}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5817071582442139589}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &969452847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969452846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cfaf57c8a77ec44830db6472c81ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackState: {fileID: 5817071583309444598}
+  ParentEnemy: {fileID: 5817071582918065133}
+  agent: {fileID: 5817071582918065131}
+  AllyDetectionRange: 20
 --- !u!1 &5817071582442139588
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +78,7 @@ Transform:
   - {fileID: 5817071583092919207}
   - {fileID: 5817071583309444597}
   - {fileID: 5817071583396577035}
+  - {fileID: 969452848}
   m_Father: {fileID: 5817071582918065130}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,7 +304,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 6
+  m_Speed: 4
   m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 240
@@ -325,9 +373,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackState: {fileID: 5817071583309444598}
+  fearState: {fileID: 969452847}
   isInAttackRange: 0
   agent: {fileID: 5817071582918065131}
   AttackRange: 10
+  ParentEnemy: {fileID: 5817071582918065133}
+  AllyDetectionRange: 20
+  IsAfraid: 0
+  IsAllyCloseEnough: 0
 --- !u!1 &5817071583119382355
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseState: {fileID: 5817071583092919200}
   canSeeThePlayer: 0
-  DetectionRange: 15
+  DetectionRange: 30
 --- !u!1 &5817071583309444596
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,14 +471,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coverState: {fileID: 5817071583396577044}
-  NumShotsTaken: 0
+  fearState: {fileID: 969452847}
   NumShotsRequired: 0
   BulletCooldown: 120
   BulletPrefab: {fileID: 85894696049932481, guid: 7852edb9a3f9390408940162634d38ca, type: 3}
-  BulletForce: 10
+  BulletForce: 30
   firePoint: {fileID: 5817071582529310248}
   ParentTransform: {fileID: 5817071582918065130}
   agent: {fileID: 5817071582918065131}
+  ParentEnemy: {fileID: 5817071582918065133}
+  AllyDetectionRange: 20
+  IsAfraid: 0
+  IsAllyCloseEnough: 0
+  NumShotsTaken: 0
 --- !u!1 &5817071583396577034
 GameObject:
   m_ObjectHideFlags: 0
