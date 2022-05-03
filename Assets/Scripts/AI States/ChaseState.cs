@@ -30,6 +30,7 @@ public class ChaseState : State
         {
             IsAllyCloseEnough = false;
             IsAfraid = false;
+            fearState.ClosestAlly = null;
             fearState.FindAlly();
             return fearState;
         }

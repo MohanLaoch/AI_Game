@@ -12,7 +12,7 @@ public class FearState : State
     public GameObject ParentEnemy;
     public NavMeshAgent agent;
 
-    private GameObject ClosestAlly;
+    public GameObject ClosestAlly;
 
     public bool NoAllies;
     public bool AllyCloseEnough;
@@ -45,13 +45,13 @@ public class FearState : State
 
     public void RunState()
     {
-        if (Vector3.Distance(gameObject.transform.position, ClosestAlly.transform.position) <= AllyDetectionRange / 2)
-        {
-            AllyCloseEnough = true;
-        }
-        else if (ClosestAlly == null && NoAllies == false)
+        if (ClosestAlly == null && NoAllies == false)
         {
             FindAlly();
+        }
+        else if (NoAllies == false && Vector3.Distance(gameObject.transform.position, ClosestAlly.transform.position) <= AllyDetectionRange / 2)
+        {
+            AllyCloseEnough = true;
         }
         else
         {

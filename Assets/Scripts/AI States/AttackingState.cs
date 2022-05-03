@@ -43,7 +43,7 @@ public class AttackingState : State
             BulletCurrentCooldown = 0f;
             IsAllyCloseEnough = false;
             IsAfraid = false;
-            fearState.FindAlly();
+            fearState.ClosestAlly = null;
             return fearState;
         }
         else if (NumShotsTaken == NumShotsRequired)
