@@ -7,6 +7,8 @@ public class CoverState : State
 {
     public AttackingState attackState;
     public ChaseState chaseState;
+    public FearState fearState;
+
     public NavMeshAgent agent;
 
     private GameObject Player;
@@ -19,11 +21,24 @@ public class CoverState : State
 
     private bool HasMoved;
 
+    //Fear Variables
+    public GameObject ParentEnemy;
+    public float AllyDetectionRange = 20f;
+    public bool IsAfraid;
+    public bool IsAllyCloseEnough;
+    public bool NoAllies;
+
     public override State RunCurrentState()
     {
         RunState();
-
-        if (agent.remainingDistance <= agent.stoppingDistance && walkCurrentCooldown <= walkCooldown && HasMoved == true)
+        if (IsAfraid == true && NoAllies == false)
+        {
+            IsAllyCloseEnough = false;
+            IsAfraid = false;
+            fearState.FindAlly();
+            return fearState;
+        }
+        else if (agent.remainingDistance <= agent.stoppingDistance && walkCurrentCooldown <= walkCooldown && HasMoved == true)
         {
             RaycastHit hit;
 
@@ -34,6 +49,7 @@ public class CoverState : State
                     walkCurrentCooldown = walkCooldown;
                     HasMoved = false;
                     attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+                    attackState.NumShotsTaken = 0;
                     return attackState;
                 }
                 else
@@ -80,6 +96,24 @@ public class CoverState : State
         if(walkCurrentCooldown <= walkCooldown)
         {
             walkCurrentCooldown--;
+        }
+
+        IsAllyCloseEnough = false;
+
+        GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var Ally in Allies)
+        {
+            if (Ally != ParentEnemy)
+            {
+                if (Vector3.Distance(gameObject.transform.position, Ally.transform.position) < AllyDetectionRange)
+                {
+                    IsAllyCloseEnough = true;
+                }
+            }
+        }
+        if (IsAllyCloseEnough != true)
+        {
+            IsAfraid = true;
         }
     }
 }

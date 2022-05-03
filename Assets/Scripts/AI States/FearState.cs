@@ -5,16 +5,17 @@ using UnityEngine.AI;
 
 public class FearState : State
 {
-    public AttackingState AttackState;
+    public AttackingState attackState;
     public ChaseState chaseState;
+    public CoverState coverState;
 
     public GameObject ParentEnemy;
     public NavMeshAgent agent;
 
     private GameObject ClosestAlly;
 
-    private bool NoAllies;
-    private bool AllyCloseEnough;
+    public bool NoAllies;
+    public bool AllyCloseEnough;
     public float AllyDetectionRange = 20f;
 
     public override State RunCurrentState()
@@ -23,15 +24,18 @@ public class FearState : State
 
         if(NoAllies)
         {
-            AttackState.NumShotsRequired = (int)Random.Range(4f, 7f);
-            AttackState.NoAllies = true;
+            attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+            attackState.NumShotsTaken = 0;
+            attackState.NoAllies = true;
             chaseState.NoAllies = true;
-            return AttackState;
+            coverState.NoAllies = true;
+            return attackState;
         }
         else if(AllyCloseEnough)
         {
-            AttackState.NumShotsRequired = (int)Random.Range(4f, 7f);
-            return AttackState;
+            attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+            attackState.NumShotsTaken = 0;
+            return attackState;
         }
         else
         {
@@ -41,19 +45,22 @@ public class FearState : State
 
     public void RunState()
     {
-        if(Vector3.Distance(gameObject.transform.position, agent.destination) <= AllyDetectionRange/2)
+        if (Vector3.Distance(gameObject.transform.position, ClosestAlly.transform.position) <= AllyDetectionRange / 2)
         {
             AllyCloseEnough = true;
         }
-        else if(ClosestAlly == null)
+        else if (ClosestAlly == null && NoAllies == false)
         {
-            NoAllies = true;
+            FindAlly();
+        }
+        else
+        {
+            AllyCloseEnough = false;
         }
     }
 
     public void FindAlly()
     {
-
         GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
         float ClosestAllyDistance = 9999;
 
@@ -67,6 +74,11 @@ public class FearState : State
                     ClosestAllyDistance = Vector3.Distance(gameObject.transform.position, Ally.transform.position);
                 }
             }
+        }
+
+        if(ClosestAlly == null)
+        {
+            NoAllies = true;
         }
 
         if (ClosestAlly != null)

@@ -36,6 +36,7 @@ public class ChaseState : State
         else if (isInAttackRange)
         {
             attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+            attackState.NumShotsTaken = 0;
             IsAllyCloseEnough = false;
             IsAfraid = false;
             return attackState;
@@ -64,8 +65,14 @@ public class ChaseState : State
                 {
                     isInAttackRange = true;
                 }
+                else
+                {
+                    isInAttackRange = false;
+                }
             }
         }
+
+        IsAllyCloseEnough = false;
 
         GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (var Ally in Allies)

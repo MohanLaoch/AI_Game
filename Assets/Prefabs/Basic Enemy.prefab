@@ -43,8 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cfaf57c8a77ec44830db6472c81ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackState: {fileID: 5817071583309444598}
+  attackState: {fileID: 5817071583309444598}
   chaseState: {fileID: 5817071583092919200}
+  coverState: {fileID: 5817071583396577044}
   ParentEnemy: {fileID: 5817071582918065133}
   agent: {fileID: 5817071582918065131}
   AllyDetectionRange: 20
@@ -550,7 +551,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackState: {fileID: 5817071583309444598}
   chaseState: {fileID: 5817071583092919200}
+  fearState: {fileID: 969452847}
   agent: {fileID: 5817071582918065131}
   walkRadius: 15
   walkCooldown: 10
   AttackRange: 10
+  ParentEnemy: {fileID: 5817071582918065133}
+  AllyDetectionRange: 20
+  IsAfraid: 0
+  IsAllyCloseEnough: 0
+  NoAllies: 0

@@ -68,8 +68,8 @@ public class AttackingState : State
     private void RunState()
     {
         agent.SetDestination(transform.position);
-
         CharRotation();
+
         if(BulletCurrentCooldown <= 0)
         {
             Shoot();
@@ -78,6 +78,8 @@ public class AttackingState : State
         {
             BulletCurrentCooldown--;
         }
+
+        IsAllyCloseEnough = false;
 
         GameObject[] Allies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(var Ally in Allies)
