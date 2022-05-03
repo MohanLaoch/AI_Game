@@ -21,6 +21,7 @@ public class DialogueTrigger : MonoBehaviour
                 {
                     FindObjectOfType<DialogueManager>().finishedTalking = false;
                     TriggerDialogue();
+                    
                 }
             }
         }

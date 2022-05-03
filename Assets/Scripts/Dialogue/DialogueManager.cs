@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject introDoor;
     public TMP_Text dialogueText;
 
     [SerializeField] private float typeSpeed = 0.01f;
@@ -84,5 +85,6 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         talking = false;
         finishedTalking = true;
+        introDoor.gameObject.SetActive(false);
     }
 }
