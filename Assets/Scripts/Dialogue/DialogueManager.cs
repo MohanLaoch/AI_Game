@@ -86,5 +86,6 @@ public class DialogueManager : MonoBehaviour
         talking = false;
         finishedTalking = true;
         introDoor.gameObject.SetActive(false);
+        
     }
 }
