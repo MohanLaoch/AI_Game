@@ -964,6 +964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5496,6 +5500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8612827010988684154, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8290,6 +8298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -10536,6 +10548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8612827010988684154, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -12402,6 +12418,10 @@ PrefabInstance:
     - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Name
       value: Broken wallLowPoly (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
@@ -14468,6 +14488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallWallLowPoly (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
 --- !u!1 &585446486
@@ -16424,6 +16448,10 @@ PrefabInstance:
     - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Name
       value: Broken wallLowPoly (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
@@ -20226,6 +20254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallWallLowPoly (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
 --- !u!1 &745595096 stripped
@@ -21242,6 +21274,10 @@ PrefabInstance:
     - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Name
       value: Broken wallLowPoly (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
@@ -24735,6 +24771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallWallLowPoly (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
 --- !u!1 &1070163464 stripped
@@ -24988,6 +25028,10 @@ PrefabInstance:
     - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
       propertyPath: m_Name
       value: SmallWallLowPoly (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
@@ -26884,7 +26928,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22572
+  m_Name: pb_Mesh22580
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27394,7 +27438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21682
+  m_Name: pb_Mesh21640
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27570,6 +27614,10 @@ PrefabInstance:
     - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Name
       value: Broken wallLowPoly (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8612827010988684154, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -30057,6 +30105,10 @@ PrefabInstance:
     - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
       propertyPath: m_Name
       value: SmallWallLowPoly (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
@@ -34597,6 +34649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -35492,7 +35548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21576
+  m_Name: pb_Mesh21524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47175,7 +47231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22692
+  m_Name: pb_Mesh22716
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47358,7 +47414,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21180
+  m_Name: pb_Mesh21092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49729,6 +49785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Broken wallLowPoly (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8483721483137798665, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -51398,6 +51458,10 @@ PrefabInstance:
     - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
       propertyPath: m_Name
       value: SmallWallLowPoly (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
@@ -54460,6 +54524,10 @@ PrefabInstance:
     - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
       propertyPath: m_Name
       value: SmallWallLowPoly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850415142217501737, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564ed05295c5578468465e3e309f66f9, type: 3}
