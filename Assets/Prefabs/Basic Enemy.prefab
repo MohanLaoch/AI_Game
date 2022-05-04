@@ -51,7 +51,7 @@ MonoBehaviour:
   ClosestAlly: {fileID: 0}
   NoAllies: 0
   AllyCloseEnough: 0
-  AllyDetectionRange: 20
+  AllyDetectionRange: 10
 --- !u!1 &5817071582442139588
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   agent: {fileID: 5817071582918065131}
   AttackRange: 10
   ParentEnemy: {fileID: 5817071582918065133}
-  AllyDetectionRange: 20
+  AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
   NoAllies: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseState: {fileID: 5817071583092919200}
   canSeeThePlayer: 0
-  DetectionRange: 30
+  DetectionRange: 20
 --- !u!1 &5817071583309444596
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   ParentTransform: {fileID: 5817071582918065130}
   agent: {fileID: 5817071582918065131}
   ParentEnemy: {fileID: 5817071582918065133}
-  AllyDetectionRange: 20
+  AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
   NoAllies: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   walkCooldown: 10
   AttackRange: 10
   ParentEnemy: {fileID: 5817071582918065133}
-  AllyDetectionRange: 20
+  AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
   NoAllies: 0
