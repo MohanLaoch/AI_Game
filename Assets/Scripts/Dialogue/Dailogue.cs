@@ -6,6 +6,8 @@ public class Dialogue
 {
     [TextArea(3, 10)]
     public string[] sentence;
+    public Sprite[] CharacterPortrait;
+    public Color[] TextColor;
 
     public string name;
 }

@@ -7455,7 +7455,7 @@ Transform:
   - {fileID: 1785191837}
   - {fileID: 210860632}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233454255
 GameObject:
@@ -16469,6 +16469,10 @@ PrefabInstance:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5990459145450409924, guid: c5ec5783e3b698f478643cc1e71919a0, type: 3}
+      propertyPath: portraitObj
+      value: 
+      objectReference: {fileID: 884102046}
+    - target: {fileID: 5990459145450409924, guid: c5ec5783e3b698f478643cc1e71919a0, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1688384453}
@@ -18418,7 +18422,7 @@ Transform:
   - {fileID: 123522465}
   - {fileID: 1420778825}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689907011
 GameObject:
@@ -18997,7 +19001,7 @@ GameObject:
   - component: {fileID: 722116420}
   - component: {fileID: 722116419}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Player UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19077,8 +19081,8 @@ RectTransform:
   m_Children:
   - {fileID: 1885398930}
   - {fileID: 1616828629}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1178600699}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22362,6 +22366,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9149039630123206835, guid: f93c73fe38766cd42951a3370d996aec, type: 3}
   m_PrefabInstance: {fileID: 861498611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &884102044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 884102045}
+  - component: {fileID: 884102047}
+  - component: {fileID: 884102046}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &884102045
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884102044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1885398930}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -288.6458, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &884102046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884102044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &884102047
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884102044}
+  m_CullTransparentMesh: 1
 --- !u!1 &886901496
 GameObject:
   m_ObjectHideFlags: 0
@@ -26852,6 +26931,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
       value: "Staffy: \u201CGreat, another student senselessly throwing themselves
         into danger\u201D"
@@ -26902,6 +26985,186 @@ PrefabInstance:
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[10]
       value: 'Staffy: Sighs'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].g
+      value: 0.8358961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].r
+      value: 0.47798735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[2].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[2].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[2].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[2].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[3].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[3].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[3].g
+      value: 0.8358961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[3].r
+      value: 0.47798735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[4].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[4].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[4].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[4].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[5].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[5].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[5].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[5].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[6].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[6].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[6].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[6].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[7].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[7].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[7].g
+      value: 0.8358961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[7].r
+      value: 0.47798735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[8].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[8].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[8].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[8].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[9].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[9].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[9].g
+      value: 0.8358961
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[9].r
+      value: 0.47798735
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[10].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[10].b
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[10].g
+      value: 0.45911944
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[10].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.CharacterPortrait.Array.size
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740453, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: m_Name
@@ -27704,7 +27967,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097163196
 GameObject:
@@ -30013,8 +30276,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1016164691}
+  - {fileID: 722116422}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181039284
 GameObject:
@@ -31334,12 +31598,44 @@ PrefabInstance:
       value: Staffy
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
       value: "Player: \u201Clook over there staffy, a chest!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[1]
       value: "Staffy: \u201Coh wow a chest. In a dungeon. How unpredictable.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].g
+      value: 0.08204436
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[0].r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.TextColor.Array.data[1].r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
+      propertyPath: dialogue.CharacterPortrait.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740453, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: m_Name
@@ -48047,6 +48343,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1688384452}
+  - {fileID: 884102045}
   m_Father: {fileID: 722116422}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49047,7 +49344,7 @@ Transform:
   - {fileID: 1710958385}
   - {fileID: 1120412223}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1938836497
 GameObject:

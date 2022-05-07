@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject introDoor;
     public TMP_Text dialogueText;
+    public Image portraitObj;
 
     [SerializeField] private float RegularTypeSpeed = 0.01f;
     [SerializeField] private float FastTypeSpeed = 0.001f;
@@ -18,6 +19,8 @@ public class DialogueManager : MonoBehaviour
     public bool finishedTalking;
     public bool talking = false;
     public Queue<string> sentences;
+    public Queue<Sprite> sentencePortrait;
+    public Queue<Color> sentenceColor;
 
     //private AudioSource Hum;
 
@@ -25,6 +28,8 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        sentencePortrait = new Queue<Sprite>();
+        sentenceColor = new Queue<Color>();
         //Hum = gameObject.GetComponent<AudioSource>();
     }
 
@@ -33,10 +38,25 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Starting conversation with " + dialogue.name);
 
         sentences.Clear();
+        sentencePortrait.Clear();
+        sentenceColor.Clear();
 
-        foreach (var sentence in dialogue.sentence)
+        for(int i = 0; i < dialogue.sentence.Length; i++)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(dialogue.sentence[i]);
+
+            if (dialogue.CharacterPortrait[i] != null)
+            {
+                sentencePortrait.Enqueue(dialogue.CharacterPortrait[i]);
+            }
+            if (dialogue.TextColor[i] != null)
+            {
+                sentenceColor.Enqueue(dialogue.TextColor[i]);
+            }
+            else
+            {
+                sentenceColor.Enqueue(Color.black);
+            }
         }
 
         DisplayNextSentence();
@@ -71,14 +91,24 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+
+        Sprite portrait;
+        if (sentencePortrait.Count != 0) { portrait = sentencePortrait.Dequeue(); }
+        else { portrait = null; }
+
+        Color color = sentenceColor.Dequeue();
+
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(sentence, portrait, color));
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence, Sprite portrait, Color color)
     {
         typingSentence = true;
         dialogueText.text = "";
+        dialogueText.color = color;
+        portraitObj.sprite = portrait;
+
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -95,7 +125,11 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of Conversation");
         StopAllCoroutines();
+
         dialogueText.text = "";
+        portraitObj.sprite = null;
+        dialogueText.color = Color.black;
+        
         talking = false;
         finishedTalking = true;
         introDoor.gameObject.SetActive(false);
