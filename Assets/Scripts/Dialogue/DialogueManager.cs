@@ -10,8 +10,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject introDoor;
     public TMP_Text dialogueText;
 
-    [SerializeField] private float typeSpeed = 0.01f;
-    [SerializeField] private float DialogueCooldown = 1f;
+    [SerializeField] private float RegularTypeSpeed = 0.01f;
+    [SerializeField] private float FastTypeSpeed = 0.001f;
+    private float CurrentTypeSpeed;
 
     private bool typingSentence;
     public bool finishedTalking;
@@ -40,10 +41,29 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextSentence();
     }
+    public void Update()
+    {
+        if (talking == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (typingSentence == true)
+                {
+                    CurrentTypeSpeed = FastTypeSpeed;
+                }
+                else
+                {
+                    DisplayNextSentence();
+                }
+            }
+        }
+    }
 
     // ReSharper disable Unity.PerformanceAnalysis
     private void DisplayNextSentence()
     {
+        CurrentTypeSpeed = RegularTypeSpeed;
+
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -66,16 +86,9 @@ public class DialogueManager : MonoBehaviour
             {
                 Hum.Play();
             }*/
-            yield return new WaitForSeconds((float)typeSpeed);
+            yield return new WaitForSeconds(CurrentTypeSpeed);
         }
         typingSentence = false;
-
-        if (sentences != null)
-        {
-            yield return new WaitForSecondsRealtime(DialogueCooldown);
-
-            DisplayNextSentence();
-        }
     }
 
     private void EndDialogue()
@@ -86,6 +99,5 @@ public class DialogueManager : MonoBehaviour
         talking = false;
         finishedTalking = true;
         introDoor.gameObject.SetActive(false);
-        
     }
 }

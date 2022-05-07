@@ -72,6 +72,10 @@ public class ChaseState : State
                 }
             }
         }
+        else
+        {
+            isInAttackRange = false;
+        }
 
         IsAllyCloseEnough = false;
 
