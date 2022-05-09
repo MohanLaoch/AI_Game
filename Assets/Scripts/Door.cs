@@ -13,25 +13,16 @@ public class Door : MonoBehaviour
 
     public PlayerStats playerStats;
 
+    public bool atDoor;
+
     public bool doorOpened;
 
     public bool doorLocked;
 
-    private void OnTriggerEnter(Collider other)
+    public void Update()
     {
-        doorUI.SetActive(true);
-
-        if (playerStats.hasKey)
+        if (atDoor)
         {
-            doorLocked = false;
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player") && !doorOpened)
-        {
-
             if (Input.GetKeyDown(KeyCode.E) && !doorLocked)
             {
                 animator.SetBool("Open", true);
@@ -39,7 +30,21 @@ public class Door : MonoBehaviour
                 doorOpened = true;
             }
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        doorUI.SetActive(true);
+
+        if (other.gameObject.CompareTag("Player") && !doorOpened)
+        {
+            atDoor = true;
+        }
+
+        if (playerStats.hasKey)
+        {
+            doorLocked = false;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -47,6 +52,7 @@ public class Door : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             doorUI.SetActive(false);
+            atDoor = false;
         }
     }
 }
