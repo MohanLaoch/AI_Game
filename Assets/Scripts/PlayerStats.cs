@@ -10,6 +10,8 @@ public class PlayerStats : MonoBehaviour
     public int MaxDamage;
     public int MinDamage;
 
+    public bool hasKey;
+
     public void Start()
     {
         CurrentHP = MaxHP;
