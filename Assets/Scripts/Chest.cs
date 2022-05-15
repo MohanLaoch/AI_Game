@@ -6,9 +6,9 @@ public class Chest : MonoBehaviour
 {
     public GameObject chestUI;
 
-    public Animator animator;
+    public GameObject key;
 
-    public PlayerStats playerStats;
+    public Animator animator;
 
     public bool atChest;
 
@@ -22,7 +22,7 @@ public class Chest : MonoBehaviour
             {
                 animator.SetBool("Open", true);
                 chestOpened = true;
-                playerStats.hasKey = true;
+                key.SetActive(true);
             }
         }
     }

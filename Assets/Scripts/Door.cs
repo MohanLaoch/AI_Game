@@ -31,10 +31,10 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        doorUI.SetActive(true);
 
         if (other.gameObject.CompareTag("Player") && !doorOpened)
         {
+            doorUI.SetActive(true);
             atDoor = true;
         }
 
