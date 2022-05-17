@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour
 {
+    public HealthBar healthbar;
     public int MaxHP;
     public int CurrentHP;
     public int MaxDamage;
@@ -29,5 +30,7 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
+
+        healthbar.SetHealth(CurrentHP);
     }
 }
