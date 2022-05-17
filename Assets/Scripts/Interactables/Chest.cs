@@ -22,6 +22,7 @@ public class Chest : MonoBehaviour
             {
                 animator.SetBool("Open", true);
                 chestOpened = true;
+                chestUI.SetActive(false);
                 key.SetActive(true);
             }
         }
