@@ -24,11 +24,15 @@ public class Key : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        keyUI.SetActive(true);
-
+        
         if (other.gameObject.CompareTag("Player"))
         {
+            keyUI.SetActive(true);
             atKey = true;
+        }
+        else
+        {
+            keyUI.SetActive(false);
         }
     }
 

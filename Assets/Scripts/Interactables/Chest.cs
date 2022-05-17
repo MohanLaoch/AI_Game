@@ -29,11 +29,15 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        chestUI.SetActive(true);
 
         if (other.gameObject.CompareTag("Player") && !chestOpened)
         {
+            chestUI.SetActive(true);
             atChest = true;
+        }
+        else
+        {
+            chestUI.SetActive(false);
         }
     }
 
