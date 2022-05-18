@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject introDoor;
+    public GameObject DialogueBox;
     public TMP_Text dialogueText;
     public Image portraitObj;
 
@@ -124,6 +125,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         Debug.Log("End of Conversation");
+        DialogueBox.gameObject.SetActive(false);
         StopAllCoroutines();
 
         dialogueText.text = "";
