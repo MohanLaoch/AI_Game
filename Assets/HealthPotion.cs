@@ -5,10 +5,13 @@ using UnityEngine;
 public class HealthPotion : MonoBehaviour
 {
     public PlayerStats playerStats;
+    public HealthBar healthBar;
+    public int HealAmount;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        HealAmount = 20;
     }
 
     // Update is called once per frame
@@ -23,9 +26,10 @@ public class HealthPotion : MonoBehaviour
         {
             if (other.CompareTag("Player"))
             {
+
                 Destroy(gameObject);
-                playerStats.CurrentHP += 20;
-                Debug.Log("Healed");
+                playerStats.CurrentHP = playerStats.CurrentHP + HealAmount;
+                healthBar.SetHealth(playerStats.CurrentHP);
 
             }
         }

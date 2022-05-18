@@ -7,14 +7,17 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     private bool playerNear = false;
+    public GameObject DialogueBox;
     //public AudioSource SoundFX;
 
     private bool thisDialogueTriggered;
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Player")
         {
+            DialogueBox.gameObject.SetActive(true);
             if (FindObjectOfType<DialogueManager>().talking != true)
             {
                 if (thisDialogueTriggered != true)
@@ -25,6 +28,16 @@ public class DialogueTrigger : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            
+            Destroy(gameObject);
+        }
+        
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
