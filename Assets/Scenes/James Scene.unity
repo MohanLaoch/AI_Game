@@ -14528,11 +14528,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
-      value: "Player: \u201Cthat sure was a close one!\u201D"
+      value: "Player: \u201CThat sure was a close one!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[1]
-      value: "Staffy: \u201Cyeah that lone skeleton archer really had you on the
+      value: "Staffy: \u201CYeah that lone skeleton archer really had you on the
         ropes. You definitely didn\u2019t two shot him or anything\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
@@ -27585,7 +27585,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh435420
+  m_Name: pb_Mesh22732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28036,7 +28036,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh437314
+  m_Name: pb_Mesh24632
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42381,11 +42381,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
-      value: "Player: \u201Cyikes! These guys don\u2019t play around!\u201D"
+      value: "Player: \u201CYikes! These guys don\u2019t play around!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[1]
-      value: "Staffy: \u201Cyou\u2019re meant to DODGE enemy attacks, not stand there
+      value: "Staffy: \u201CYou\u2019re meant to DODGE enemy attacks, not stand there
         like a buffoon!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
@@ -49124,7 +49124,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh434500
+  m_Name: pb_Mesh21812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51160,39 +51160,87 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 193802bd7ed9dc1468d9dc1ecaecab42, type: 3}
+      objectReference: {fileID: 8300000, guid: 3c086f198a2f65245a127757dfa795fc, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[0].loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[0].name
-      value: DoorOpen
+      value: BackgroundTheme
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: dbbed6885f242b641b8db31cb3967783, type: 3}
+      objectReference: {fileID: 8300000, guid: 193802bd7ed9dc1468d9dc1ecaecab42, type: 3}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[1].name
-      value: DoorLocked
+      value: DoorOpen
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a584088d4f8f1504799e10f0010a759b, type: 3}
+      objectReference: {fileID: 8300000, guid: dbbed6885f242b641b8db31cb3967783, type: 3}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[2].name
-      value: LeverSwitch
+      value: DoorLocked
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: f943b78f578578f48bc1d953948a6e3b, type: 3}
+      objectReference: {fileID: 8300000, guid: a584088d4f8f1504799e10f0010a759b, type: 3}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[3].name
+      value: LeverSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f943b78f578578f48bc1d953948a6e3b, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[4].name
       value: LargeDoorOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 681b6f7a163c0da448126b1b452bcda4, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: PotionDrink
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c1ae6918a21a1c46afde51951f8b881, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: ChestOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b3073a778bb6174ca811b5ab806bcce, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[7].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: ArrowShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2b74458f15d637946aebf02947a988e4, type: 3}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: PlayerShoot
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[0].pitch
@@ -51211,8 +51259,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[1].volume
@@ -51224,6 +51292,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
       propertyPath: sounds.Array.data[3].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5558426310431437440, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
+      propertyPath: sounds.Array.data[8].volume
       value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7055050757672091381, guid: 9659ad3fbccc8cd45beb63eaebb51467, type: 3}
@@ -53366,7 +53454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3776432127196414309, guid: baae0c2fea4cdd84082fa9e0cb3dee12, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -259.8369
+      value: -312.3745
       objectReference: {fileID: 0}
     - target: {fileID: 3776432127196414309, guid: baae0c2fea4cdd84082fa9e0cb3dee12, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -57347,11 +57435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[0]
-      value: "Player: \u201Clook over there staffy, a chest!\u201D"
+      value: "Player: \u201CLook over there staffy, a lever!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[1]
-      value: "Staffy: \u201Coh wow a chest. In a dungeon. How unpredictable.\u201D"
+      value: "Staffy: \u201COh wow a lever in a dungeon... How unpredictable.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.TextColor.Array.data[0].a
@@ -61419,8 +61507,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[4]
-      value: "Staffy: \u201CNo I\u2019m here to shine your shoes YES IM HERE TO HELP
-        YOU!\u201D "
+      value: "Staffy: \u201CNo I\u2019m here to shine your shoes... YES IM HERE TO
+        HELP YOU!\u201D "
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[5]
@@ -61449,7 +61537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.sentence.Array.data[10]
-      value: 'Staffy: Sighs'
+      value: 'Staffy: *Sighs*'
       objectReference: {fileID: 0}
     - target: {fileID: 5820294203535740452, guid: 21d121291d4c5dd4d84630a3e24f180a, type: 3}
       propertyPath: dialogue.TextColor.Array.data[0].a
@@ -61828,7 +61916,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh435214
+  m_Name: pb_Mesh22526
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -66001,7 +66089,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh437078
+  m_Name: pb_Mesh24396
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -72070,7 +72158,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh436828
+  m_Name: pb_Mesh24146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

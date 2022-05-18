@@ -18,11 +18,12 @@ public class Chest : MonoBehaviour
     {
         if (atChest)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !chestOpened)
             {
                 animator.SetBool("Open", true);
                 chestOpened = true;
                 chestUI.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("ChestOpen");
                 key.SetActive(true);
             }
         }

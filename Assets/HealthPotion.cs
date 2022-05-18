@@ -30,6 +30,7 @@ public class HealthPotion : MonoBehaviour
                 Destroy(gameObject);
                 playerStats.CurrentHP = playerStats.CurrentHP + HealAmount;
                 healthBar.SetHealth(playerStats.CurrentHP);
+                FindObjectOfType<AudioManager>().Play("PotionDrink");
 
             }
         }
