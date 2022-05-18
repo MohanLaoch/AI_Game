@@ -5,6 +5,7 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     public State currentState;
+    public IdleState DefaultState;
 
     void Update()
     {

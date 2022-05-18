@@ -684,6 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 5817071583119382365}
+  DefaultState: {fileID: 5817071583119382365}
 --- !u!114 &2270445479266544085
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class ChaseState : State
         }
         agent.SetDestination(Player.transform.position);
 
-        if (Vector3.Distance(transform.position, Player.transform.position) >= AttackRange)
+        if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
         {
             RaycastHit hit;
 

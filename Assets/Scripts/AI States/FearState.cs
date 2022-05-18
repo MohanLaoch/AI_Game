@@ -41,6 +41,10 @@ public class FearState : State
         {
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
+                if(ClosestAlly.GetComponent<StateManager>().currentState = ClosestAlly.GetComponent<StateManager>().DefaultState)
+                {
+                    ClosestAlly.GetComponent<StateManager>().DefaultState.canSeeThePlayer = true;
+                }
                 RaycastHit hit;
 
                 if (Physics.Raycast(transform.position, Player.transform.position - transform.position, out hit, AttackRange))
@@ -63,10 +67,9 @@ public class FearState : State
                 chaseState.isInAttackRange = false;
                 return chaseState;
             }
-            attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
-            attackState.NumShotsTaken = 0;
             FearIcon.gameObject.SetActive(false);
-            return attackState;
+            chaseState.isInAttackRange = false;
+            return chaseState;
         }
         else
         {
