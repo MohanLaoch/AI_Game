@@ -55749,6 +55749,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 2355982399387309400, guid: a115635cdf25023408d3a143379f7208, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a4036ab5276ff0348b7319c8218cf611, type: 2}
     - target: {fileID: 4572538528485005993, guid: a115635cdf25023408d3a143379f7208, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
