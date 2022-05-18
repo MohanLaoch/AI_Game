@@ -41,6 +41,7 @@ public class FearState : State
         {
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
+                
                 RaycastHit hit;
 
                 if (Physics.Raycast(transform.position, Player.transform.position - transform.position, out hit, AttackRange))
@@ -49,24 +50,39 @@ public class FearState : State
                     {
                         attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
                         attackState.NumShotsTaken = 0;
-                        FearIcon.gameObject.SetActive(false);
+                        FearIcon.gameObject.SetActive(false); 
+                        if (ClosestAlly.GetComponent<StateManager>().currentState = ClosestAlly.GetComponent<StateManager>().DefaultState)
+                        {
+                            ClosestAlly.GetComponent<StateManager>().DefaultState.canSeeThePlayer = true;
+                        }
                         return attackState;
                     }
                     else
                     {
                         FearIcon.gameObject.SetActive(false);
                         chaseState.isInAttackRange = false;
+                        if (ClosestAlly.GetComponent<StateManager>().currentState = ClosestAlly.GetComponent<StateManager>().DefaultState)
+                        {
+                            ClosestAlly.GetComponent<StateManager>().DefaultState.canSeeThePlayer = true;
+                        }
                         return chaseState;
                     }
                 }
                 FearIcon.gameObject.SetActive(false);
                 chaseState.isInAttackRange = false;
+                if (ClosestAlly.GetComponent<StateManager>().currentState = ClosestAlly.GetComponent<StateManager>().DefaultState)
+                {
+                    ClosestAlly.GetComponent<StateManager>().DefaultState.canSeeThePlayer = true;
+                }
                 return chaseState;
             }
-            attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
-            attackState.NumShotsTaken = 0;
             FearIcon.gameObject.SetActive(false);
-            return attackState;
+            chaseState.isInAttackRange = false;
+            if (ClosestAlly.GetComponent<StateManager>().currentState = ClosestAlly.GetComponent<StateManager>().DefaultState)
+            {
+                ClosestAlly.GetComponent<StateManager>().DefaultState.canSeeThePlayer = true;
+            }
+            return chaseState;
         }
         else
         {

@@ -36,9 +36,7 @@ public class IdleState : State
         if (IdleIcon.activeSelf == false)
         {
             IdleIcon.gameObject.SetActive(true);
-            Debug.Log("test");
-        }
-        Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.red, DetectionRange);
+        };
         if (Vector3.Distance(transform.position, Player.transform.position) <= DetectionRange)
         {
             RaycastHit hit;
