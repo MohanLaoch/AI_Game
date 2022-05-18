@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8149733066904214774}
   - component: {fileID: 5095383855898792787}
   - component: {fileID: 7012816928314714009}
+  - component: {fileID: 1585278867}
   m_Layer: 0
   m_Name: Stool
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8814243378069030476}
-  m_LocalRotation: {x: -0.00000013767877, y: 0.7071068, z: 0.70710677, w: 0.00000013767878}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -1.9486597, y: -2.4580197, z: 1.9256687}
-  m_LocalScale: {x: 88.981964, y: 85.236725, z: 14.663102}
+  m_LocalScale: {x: 37.9, y: 36.3, z: 6.2000003}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
 --- !u!33 &5095383855898792787
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1585278867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814243378069030476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020537326, y: 0.020082287, z: 0.11279231}
+  m_Center: {x: -0.000072282266, y: -0.000041144434, z: -0.042529024}
