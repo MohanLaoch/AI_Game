@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity = new Vector3(0, 0, 0);
 
     private Vector3 pointToLook;
+    [SerializeField] private AudioSource ShootSFX;
 
     private void Start()
     {
@@ -81,6 +82,8 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot()
     {
+        ShootSFX.Play();
+
         Vector3 FireDir = pointToLook;
         BulletCurrentCooldown = BulletCooldown;
         GameObject Bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);

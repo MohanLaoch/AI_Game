@@ -34,6 +34,8 @@ public class AttackingState : State
     public int NumShotsTaken;
     private float BulletCurrentCooldown = 0f;
 
+    [SerializeField] private AudioSource ShootSFX;
+
     public override State RunCurrentState()
     {
         RunState();
@@ -115,6 +117,8 @@ public class AttackingState : State
     }
     public void Shoot()
     {
+        ShootSFX.Play();
+
         Vector3 FireDir = Player.transform.position;
         BulletCurrentCooldown = BulletCooldown;
         GameObject Bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
