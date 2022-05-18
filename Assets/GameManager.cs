@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
 {
  public void SceneTransition()
     {
-
         SceneManager.LoadScene("James Scene");
 
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void Quit()
     {
