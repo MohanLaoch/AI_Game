@@ -697,11 +697,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd79c6dd3a9a1042bb844017f7dbd7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 4344250232797692774}
+  healthbar: {fileID: 0}
   MaxHP: 10
   CurrentHP: 0
   MaxDamage: 4
   MinDamage: 6
+  Enemy: {fileID: 5817071582918065133}
+  Red: {fileID: 2100000, guid: dd9d7c2251985cb43b203f5d7aa314ae, type: 2}
 --- !u!1 &5817071583092919206
 GameObject:
   m_ObjectHideFlags: 0
