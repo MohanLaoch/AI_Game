@@ -20,6 +20,9 @@ public class FearState : State
     public bool AllyCloseEnough;
     public float AllyDetectionRange = 20f;
 
+    public float AttackRange = 10f;
+    private GameObject Player;
+
     public override State RunCurrentState()
     {
         RunState();
@@ -36,6 +39,30 @@ public class FearState : State
         }
         else if(AllyCloseEnough)
         {
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                RaycastHit hit;
+
+                if (Physics.Raycast(transform.position, Player.transform.position - transform.position, out hit, AttackRange))
+                {
+                    if (hit.transform.tag == "Player")
+                    {
+                        attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
+                        attackState.NumShotsTaken = 0;
+                        FearIcon.gameObject.SetActive(false);
+                        return attackState;
+                    }
+                    else
+                    {
+                        FearIcon.gameObject.SetActive(false);
+                        chaseState.isInAttackRange = false;
+                        return chaseState;
+                    }
+                }
+                FearIcon.gameObject.SetActive(false);
+                chaseState.isInAttackRange = false;
+                return chaseState;
+            }
             attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
             attackState.NumShotsTaken = 0;
             FearIcon.gameObject.SetActive(false);
@@ -45,6 +72,11 @@ public class FearState : State
         {
             return this;
         }
+    }
+
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void RunState()

@@ -61,10 +61,14 @@ public class CoverState : State
                     walkCurrentCooldown = walkCooldown;
                     HasMoved = false;
                     CoverIcon.gameObject.SetActive(false);
+                    chaseState.isInAttackRange = false;
                     return chaseState;
                 }
             }
+            walkCurrentCooldown = walkCooldown;
+            HasMoved = false;
             CoverIcon.gameObject.SetActive(false);
+            chaseState.isInAttackRange = false;
             return chaseState;
         }
         else
