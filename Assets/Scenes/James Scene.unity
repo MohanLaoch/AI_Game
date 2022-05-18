@@ -38178,6 +38178,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 516747485}
+    - target: {fileID: 4392293413728971644, guid: 18b8c64a85077b1469a16b53d4f13980, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 115738632}
     - target: {fileID: 4392293414223672732, guid: 18b8c64a85077b1469a16b53d4f13980, type: 3}
       propertyPath: m_RootOrder
       value: 0

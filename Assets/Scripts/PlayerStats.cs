@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public HealthBar healthBar;
+    public GameManager gameManager;
     public int MaxHP = 20;
     public int CurrentHP;
     public int MaxDamage;
@@ -23,6 +24,7 @@ public class PlayerStats : MonoBehaviour
         if (CurrentHP <= 0)
         {
             Destroy(gameObject);
+            gameManager.ToMenu();
         }
 
         if (CurrentHP > MaxHP)
