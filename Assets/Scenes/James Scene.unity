@@ -2241,6 +2241,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 890022670932184592, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2270445479266544085, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
       propertyPath: healthbar
       value: 
@@ -2325,6 +2329,14 @@ PrefabInstance:
       propertyPath: CoverIcon
       value: 
       objectReference: {fileID: 500488107}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
 --- !u!1001 &73301394
@@ -11773,7 +11785,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31888
+  m_Name: pb_Mesh328032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14747,6 +14759,7 @@ GameObject:
   - component: {fileID: 377743016}
   - component: {fileID: 377743018}
   - component: {fileID: 377743017}
+  - component: {fileID: 377743019}
   m_Layer: 5
   m_Name: EnemyHealthBar (2)
   m_TagString: Untagged
@@ -14839,6 +14852,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &377743019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377743015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &381035798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15803,6 +15828,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4293898133859490111, guid: 045fe9d0957684d46af1bcbce7a56e5a, type: 3}
   m_PrefabInstance: {fileID: 426560622}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &427212820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2786990674290321194, guid: 90b88dddf354b3d40ae399230c20e303, type: 3}
+  m_PrefabInstance: {fileID: 975764738885124309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &427212823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427212820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &427212824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427212820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576648671e8f15d4993d0cbc03394ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 815142229}
 --- !u!1 &429454756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7515429101286732190, guid: 4b60d647296b84640b294594f1770d8e, type: 3}
@@ -20117,6 +20173,7 @@ GameObject:
   - component: {fileID: 603049625}
   - component: {fileID: 603049627}
   - component: {fileID: 603049626}
+  - component: {fileID: 603049628}
   m_Layer: 5
   m_Name: EnemyHealthBar (1)
   m_TagString: Untagged
@@ -20209,6 +20266,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &603049628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603049624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &617660786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 69f96efe3f8ef3149acb9c32ed475147, type: 3}
@@ -30748,6 +30817,7 @@ GameObject:
   - component: {fileID: 901903370}
   - component: {fileID: 901903372}
   - component: {fileID: 901903371}
+  - component: {fileID: 901903373}
   m_Layer: 5
   m_Name: EnemyHealthBar
   m_TagString: Untagged
@@ -30840,6 +30910,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &901903373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901903369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &904409094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36434,6 +36516,7 @@ GameObject:
   - component: {fileID: 1029108217}
   - component: {fileID: 1029108219}
   - component: {fileID: 1029108218}
+  - component: {fileID: 1029108220}
   m_Layer: 5
   m_Name: EnemyHealthBar (3)
   m_TagString: Untagged
@@ -36526,6 +36609,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1029108220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029108216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1031015190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39001,6 +39096,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 890022670932184592, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2270445479266544085, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
       propertyPath: healthbar
       value: 
@@ -39077,6 +39176,14 @@ PrefabInstance:
       propertyPath: CoverIcon
       value: 
       objectReference: {fileID: 742260316}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
 --- !u!1 &1137948208 stripped
@@ -48932,6 +49039,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 890022670932184592, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2270445479266544085, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
       propertyPath: healthbar
       value: 
@@ -49000,6 +49111,14 @@ PrefabInstance:
       propertyPath: CoverIcon
       value: 
       objectReference: {fileID: 1887166543}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
 --- !u!1 &1440985682
@@ -52489,6 +52608,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 890022670932184592, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2270445479266544085, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
       propertyPath: healthbar
       value: 
@@ -52557,6 +52680,14 @@ PrefabInstance:
       propertyPath: CoverIcon
       value: 
       objectReference: {fileID: 199754398}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023007224221907503, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afac00aee02a85449f2e958d9b90ba2, type: 3}
 --- !u!43 &1541450854
