@@ -9,16 +9,19 @@ public class IdleState : State
     public float DetectionRange = 5f;
 
     private GameObject Player;
+    public GameObject IdleIcon;
 
     public override State RunCurrentState()
     {
         RunState();
         if(canSeeThePlayer)
         {
+            IdleIcon.gameObject.SetActive(false);
             return chaseState;
         }
         else
         {
+            
             return this;
         }
     }
@@ -30,6 +33,11 @@ public class IdleState : State
 
     public void RunState()
     {
+        if (IdleIcon.activeSelf == false)
+        {
+            IdleIcon.gameObject.SetActive(true);
+            Debug.Log("test");
+        }
         Debug.DrawRay(transform.position, Player.transform.position - transform.position, Color.red, DetectionRange);
         if (Vector3.Distance(transform.position, Player.transform.position) <= DetectionRange)
         {

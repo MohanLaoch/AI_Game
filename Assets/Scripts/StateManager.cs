@@ -23,6 +23,7 @@ public class StateManager : MonoBehaviour
 
     private void SwitchToTheNextState(State nextState)
     {
+        
         State lastState = currentState;
         currentState = nextState;
         lastState.enabled = false;

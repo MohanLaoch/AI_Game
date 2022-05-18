@@ -12,6 +12,7 @@ public class CoverState : State
     public NavMeshAgent agent;
 
     private GameObject Player;
+    public GameObject CoverIcon;
 
     [Range(1, 500)] public float walkRadius;
     private float walkCurrentCooldown;
@@ -37,6 +38,7 @@ public class CoverState : State
             IsAfraid = false;
             fearState.ClosestAlly = null;
             fearState.FindAlly();
+            CoverIcon.gameObject.SetActive(false);
             return fearState;
         }
         else if (agent.remainingDistance <= agent.stoppingDistance && walkCurrentCooldown <= walkCooldown && HasMoved == true)
@@ -51,16 +53,18 @@ public class CoverState : State
                     HasMoved = false;
                     attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
                     attackState.NumShotsTaken = 0;
+                    CoverIcon.gameObject.SetActive(false);
                     return attackState;
                 }
                 else
                 {
                     walkCurrentCooldown = walkCooldown;
                     HasMoved = false;
+                    CoverIcon.gameObject.SetActive(false);
                     return chaseState;
                 }
             }
-
+            CoverIcon.gameObject.SetActive(false);
             return chaseState;
         }
         else
@@ -88,7 +92,12 @@ public class CoverState : State
 
     public void RunState()
     {
-        if(HasMoved == false)
+        if (CoverIcon.activeSelf == false)
+        {
+            CoverIcon.gameObject.SetActive(true);
+            Debug.Log("test");
+        }
+        if (HasMoved == false)
         {
             HasMoved = true;
             agent.SetDestination(RandomNavMeshLocation());

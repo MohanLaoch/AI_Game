@@ -14,6 +14,8 @@ public class FearState : State
 
     public GameObject ClosestAlly;
 
+    public GameObject FearIcon;
+
     public bool NoAllies;
     public bool AllyCloseEnough;
     public float AllyDetectionRange = 20f;
@@ -29,12 +31,14 @@ public class FearState : State
             attackState.NoAllies = true;
             chaseState.NoAllies = true;
             coverState.NoAllies = true;
+            FearIcon.gameObject.SetActive(false);
             return attackState;
         }
         else if(AllyCloseEnough)
         {
             attackState.NumShotsRequired = (int)Random.Range(4f, 7f);
             attackState.NumShotsTaken = 0;
+            FearIcon.gameObject.SetActive(false);
             return attackState;
         }
         else
@@ -45,6 +49,11 @@ public class FearState : State
 
     public void RunState()
     {
+        if (FearIcon.activeSelf == false)
+        {
+            FearIcon.gameObject.SetActive(true);
+            Debug.Log("test");
+        }
         if (ClosestAlly == null && NoAllies == false)
         {
             FindAlly();

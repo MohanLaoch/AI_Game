@@ -17,6 +17,7 @@ public class AttackingState : State
     public float BulletCooldown = 60f;
 
     public GameObject BulletPrefab;
+    public GameObject AttackingIcon;
     public float BulletForce = 10f;
     public Transform firePoint;
     public Transform ParentTransform;
@@ -44,6 +45,7 @@ public class AttackingState : State
             IsAllyCloseEnough = false;
             IsAfraid = false;
             fearState.ClosestAlly = null;
+            AttackingIcon.gameObject.SetActive(false);
             return fearState;
         }
         else if (NumShotsTaken == NumShotsRequired)
@@ -52,6 +54,7 @@ public class AttackingState : State
             BulletCurrentCooldown = 0f;
             IsAllyCloseEnough = false;
             IsAfraid = false;
+            AttackingIcon.gameObject.SetActive(false);
             return coverState;
         }
         else
@@ -70,6 +73,19 @@ public class AttackingState : State
         agent.SetDestination(transform.position);
         CharRotation();
 
+        if(AttackingIcon.activeSelf == false)
+        {
+            AttackingIcon.gameObject.SetActive(true);
+            Debug.Log("test");
+        }
+
+         /*if(AttackingIcon.SetActive(false)
+           {
+         attackingicon.setactive(true)
+           }
+         
+
+         */
         if(BulletCurrentCooldown <= 0)
         {
             Shoot();

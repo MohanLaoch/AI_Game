@@ -11,6 +11,7 @@ public class ChaseState : State
     public bool isInAttackRange;
 
     private GameObject Player;
+    public GameObject ChaseIcon;
 
     public NavMeshAgent agent;
     public float AttackRange = 10f;
@@ -32,6 +33,7 @@ public class ChaseState : State
             IsAfraid = false;
             fearState.ClosestAlly = null;
             fearState.FindAlly();
+            ChaseIcon.gameObject.SetActive(false);
             return fearState;
         }
         else if (isInAttackRange)
@@ -40,6 +42,7 @@ public class ChaseState : State
             attackState.NumShotsTaken = 0;
             IsAllyCloseEnough = false;
             IsAfraid = false;
+            ChaseIcon.gameObject.SetActive(false);
             return attackState;
         }
         else
@@ -54,6 +57,11 @@ public class ChaseState : State
 
     private void RunState()
     {
+        if (ChaseIcon.activeSelf == false)
+        {
+            ChaseIcon.gameObject.SetActive(true);
+            Debug.Log("test");
+        }
         agent.SetDestination(Player.transform.position);
 
         if (Vector3.Distance(transform.position, Player.transform.position) >= AttackRange)
