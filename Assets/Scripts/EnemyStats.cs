@@ -9,6 +9,8 @@ public class EnemyStats : MonoBehaviour
     public int CurrentHP;
     public int MaxDamage;
     public int MinDamage;
+    public GameObject Enemy;
+    public Material Red;
     public void Start()
     {
         CurrentHP = MaxHP;
@@ -30,7 +32,13 @@ public class EnemyStats : MonoBehaviour
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
-
+        EnemyFlash();
         healthbar.SetHealth(CurrentHP);
+    }
+
+    public void EnemyFlash()
+    {
+        Enemy.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().material = Red;
+        Debug.Log("Flashed");
     }
 }
