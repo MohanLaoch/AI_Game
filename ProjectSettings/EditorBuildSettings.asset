@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e96652f837d0dd84499bdd591695e859
+  - enabled: 1
+    path: Assets/Scenes/James Scene.unity
+    guid: 62ea3ffb1359f2340bd37a5418f6f007
   m_configObjects: {}
