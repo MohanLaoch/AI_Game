@@ -171,18 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &644168039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735668876948013588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff0c16e86535c24fb04e9f15d4e4dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &997960862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1113,6 +1101,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4961839116886910723}
     m_Modifications:
+    - target: {fileID: 2061114316795207436, guid: 508050c246acbe64fa6b91683183d5e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8bfca32ccf376849b1c484efe3a7d19, type: 3}
     - target: {fileID: 2061114316795207438, guid: 508050c246acbe64fa6b91683183d5e9, type: 3}
       propertyPath: m_Name
       value: Chase
@@ -1267,10 +1259,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 284178271349803505, guid: d970a75e6166c924e8bcacadaf967a09, type: 3}
-      propertyPath: m_LocalScale.z
-      value: -0.27763
-      objectReference: {fileID: 0}
-    - target: {fileID: 284178271349803505, guid: d970a75e6166c924e8bcacadaf967a09, type: 3}
       propertyPath: m_LocalPosition.x
       value: -519.38
       objectReference: {fileID: 0}
@@ -1381,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 322310920489816374, guid: 01e5328485c3a704db9bf7ace64c2ebb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b8220204d3cbcc4ea8a4ab49db173f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01e5328485c3a704db9bf7ace64c2ebb, type: 3}
 --- !u!1 &5448154186050840521 stripped
@@ -1474,6 +1466,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4961839116886910723}
     m_Modifications:
+    - target: {fileID: 5554517257226088938, guid: 3daaf50f9e6c538479f52d10ffff1e51, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee5ce12f003f224439f6bc0f23f97b98, type: 3}
     - target: {fileID: 5554517257226088940, guid: 3daaf50f9e6c538479f52d10ffff1e51, type: 3}
       propertyPath: m_Name
       value: Fear
@@ -1545,6 +1541,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4961839116886910723}
     m_Modifications:
+    - target: {fileID: 1299961172591367120, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2935f85933f1c30448a378d7ed9052f8, type: 3}
     - target: {fileID: 1299961172591367121, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}
       propertyPath: m_RootOrder
       value: 5
