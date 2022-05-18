@@ -20,13 +20,4 @@ public class HealthBar : MonoBehaviour
         slider.maxValue = health;
         slider.value = health;
     }
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

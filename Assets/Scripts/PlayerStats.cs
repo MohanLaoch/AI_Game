@@ -29,12 +29,12 @@ public class PlayerStats : MonoBehaviour
         {
             CurrentHP = MaxHP;
         }
+
+        healthBar.SetHealth(CurrentHP);
     }
 
     public void TakeDamage(int damage)
     {
         CurrentHP -= damage;
-
-        healthBar.SetHealth(CurrentHP);
     }
 }
