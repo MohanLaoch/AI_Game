@@ -26,6 +26,11 @@ public class Door : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("DoorOpen");
                 doorOpened = true;
             }
+
+            if (Input.GetKeyDown(KeyCode.E) && doorLocked)
+            {
+                FindObjectOfType<AudioManager>().Play("DoorLocked");                
+            }
         }
     }
 

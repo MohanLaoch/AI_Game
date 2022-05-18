@@ -22,7 +22,9 @@ public class Lever : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && !switched)
             {
                 animator.SetBool("Interact", true);
+                FindObjectOfType<AudioManager>().Play("LeverSwitch");
                 doubleDoorAnimator.SetBool("Open", true);
+                FindObjectOfType<AudioManager>().Play("LargeDoorOpen");
                 switched = true;
             }
         }
