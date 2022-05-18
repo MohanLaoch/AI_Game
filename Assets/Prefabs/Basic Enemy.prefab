@@ -50,7 +50,7 @@ MonoBehaviour:
   agent: {fileID: 5817071582918065131}
   ClosestAlly: {fileID: 0}
   FearIcon: {fileID: 3320304475288186519}
-  NoAllies: 1
+  NoAllies: 0
   AllyCloseEnough: 0
   AllyDetectionRange: 10
   AttackRange: 10
@@ -745,7 +745,7 @@ MonoBehaviour:
   AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
-  NoAllies: 1
+  NoAllies: 0
 --- !u!1 &5817071583119382355
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
-  NoAllies: 1
+  NoAllies: 0
   NumShotsTaken: 0
   ShootSFX: {fileID: 2032174028}
 --- !u!82 &2032174028
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   AllyDetectionRange: 10
   IsAfraid: 0
   IsAllyCloseEnough: 0
-  NoAllies: 1
+  NoAllies: 0
 --- !u!1 &6587213728428085860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,7 +1567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1299961172591367121, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.27763
+      value: -0.27763
       objectReference: {fileID: 0}
     - target: {fileID: 1299961172591367121, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1615,7 +1615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1299961172591367122, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 033585e4fee4fbd4eb9e63131a8284f2, type: 3}

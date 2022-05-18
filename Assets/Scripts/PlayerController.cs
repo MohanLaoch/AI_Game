@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
     private void CharRotation()
     {
         Ray cameraRay = cam.ScreenPointToRay(Input.mousePosition);
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        Plane groundPlane = new Plane(Vector3.up, transform.position);
         float rayLength;
 
         if(groundPlane.Raycast(cameraRay, out rayLength))
